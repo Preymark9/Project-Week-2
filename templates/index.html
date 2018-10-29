@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Box Office Analysis</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body bgcolor="#FFFFFF" id="bod" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" background="static/twinkle.gif">
+    <div class="wrapper">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <!-- <a class="navbar-brand" href="index.html">Movie Data
+              
+            </a> -->
+          </div>
+        </div>
+      </nav>
+          <div class = "container" background = "static/twinkle.gif">
+              <div class ="hero text-center">
+                  <img src = "static/coming_soon.gif">
+              </div>
+        <!--<p>The Truth is Out There</p> -->
+          </div>
+    </div>
+
+<!--navbar CHANGE THE 'CLASS=ACTIVE' TO YOUR HTML-->
+    <div class="container">
+
+            <!-- Static navbar -->
+            <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="templates/index.html" class="dropdown-item"><b>Movie Data Home</b></a></li>
+                    <li><a href="source.html" class="dropdown-item">Movie Origin</a></li>
+                    <li><a href="heatmap.html" class="dropdown-item">Heat Map</a></li>
+                    <li><a href="scatter.html" class="dropdown-item">Scatter Plot</a></li>
+                    <li><a href="data.html" class="dropdown-item">Data</a></li>
+                  </ul>
+                </div><!--/.nav-collapse -->
+              </div><!--/.container-fluid -->
+            </nav>
+<!--/navbar-->
+
+
+
+
+  <div class="container">
+
+    <div class="jumbotron text-center" background = "templates/coming_soon.gif">
+      <h1>Latest Box Office News</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Update Box Office News</a></p>
+    </div>
+
+    
+    <div class="container" style="background-color:#EFFBF2;">
+        <!-- Box Office -->
+        <div class="row">
+          <div class="col-md-6">
+            <h4 class = "text-success"><b>Box Office Guru Updates</h4></b>
+            <i><h4 class="heading">{{movie_data.box_office}}</h4></i>   
+          </div>
+
+  
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+              <h4 class = "text-success"><b>Forbes Box Office Updates</h4></b>
+              <i><h4 class="heading">{{movie_data.box_office2}}</h4></i>   
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+              <h4 class = "text-success"><b>Box Office Pro Updates</h4></b>
+              <i><h4 class="heading">{{movie_data.box_office3}}</h4></i>   
+          </div>
+        </div>
+      </div>
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css">
+  
+
+
+</body>
+</html>
+
+
