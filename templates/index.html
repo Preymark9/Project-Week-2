@@ -11,20 +11,20 @@
 
 </head>
 
-<body bgcolor="#FFFFFF" id="bod" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" background="twinkle.gif">
+<body bgcolor="#FFFFFF" id="bod" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" background="static/twinkle.gif">
     <div class="wrapper">
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">Movie Data
-              <!--<img class="nav-ufo" src="static/images/ufo.svg"> -->
-            </a>
+            <!-- <a class="navbar-brand" href="index.html">Movie Data
+              
+            </a> -->
           </div>
         </div>
       </nav>
-          <div class = "container" background = "twinkle.gif">
+          <div class = "container" background = "static/twinkle.gif">
               <div class ="hero text-center">
-                  <img src = "coming_soon.gif">
+                  <img src = "static/coming_soon.gif">
               </div>
         <!--<p>The Truth is Out There</p> -->
           </div>
@@ -46,11 +46,11 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav">
-                    <li><a href="index.html" class="dropdown-item">Home</a></li>
+                    <li class="active"><a href="templates/index.html" class="dropdown-item"><b>Movie Data Home</b></a></li>
                     <li><a href="source.html" class="dropdown-item">Movie Origin</a></li>
-                    <li><a href="heat.html" class="dropdown-item">Heat Map</a></li>
-                    <li><a href="NICK.html" class="dropdown-item">NICK</a></li>
-                    <li class="active"><a href="data.html" class="dropdown-item">Data</a></li>
+                    <li><a href="heatmap.html" class="dropdown-item">Heat Map</a></li>
+                    <li><a href="scatter.html" class="dropdown-item">Scatter Plot</a></li>
+                    <li><a href="data.html" class="dropdown-item">Data</a></li>
                   </ul>
                 </div><!--/.nav-collapse -->
               </div><!--/.container-fluid -->
@@ -67,11 +67,12 @@
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Update Box Office News</a></p>
     </div>
 
-
+    
+    <div class="container" style="background-color:#EFFBF2;">
         <!-- Box Office -->
         <div class="row">
           <div class="col-md-6">
-            <h4>Box Office Guru Updates</h4>
+            <h4 class = "text-success"><b>Box Office Guru Updates</h4></b>
             <i><h4 class="heading">{{movie_data.box_office}}</h4></i>   
           </div>
 
@@ -81,18 +82,18 @@
 
         <div class="row">
           <div class="col-md-6">
-              <h4>Forbes Box Office Updates</h4>
+              <h4 class = "text-success"><b>Forbes Box Office Updates</h4></b>
               <i><h4 class="heading">{{movie_data.box_office2}}</h4></i>   
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-6">
-              <h4>Box Office Pro Updates</h4>
+              <h4 class = "text-success"><b>Box Office Pro Updates</h4></b>
               <i><h4 class="heading">{{movie_data.box_office3}}</h4></i>   
           </div>
         </div>
-
+      </div>
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.min.css">
   
