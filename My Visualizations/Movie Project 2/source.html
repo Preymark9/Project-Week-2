@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Movie Chart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://d3js.org/d3.v3.js"></script>
+  <link rel="stylesheet" href="style_source.css">
+</head>
+<body bgcolor="#FFFFFF" id="bod" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" background="twinkle.gif">
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Movie Data
+            <!--<img class="nav-ufo" src="static/images/ufo.svg"> -->
+          </a>
+        </div>
+      </div>
+    </nav>
+        <div class = "container" background = "twinkle.gif">
+            <div class ="hero text-center">
+                <img src = "coming_soon.gif">
+            </div>
+      <!--<p>The Truth is Out There</p> -->
+        </div>
+  </div>
+
+<!--navbar CHANGE THE 'CLASS=ACTIVE' TO YOUR HTML-->
+  <div class="container">
+
+          <!-- Static navbar -->
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                  <li><a href="index.html" class="dropdown-item">Home</a></li>
+                  <li><a href="source.html" class="dropdown-item">Movie Origin</a></li>
+                  <li><a href="heat.html" class="dropdown-item">Heat Map</a></li>
+                  <li><a href="NICK.html" class="dropdown-item">NICK</a></li>
+                  <li class="active"><a href="data.html" class="dropdown-item">Data</a></li>
+                </ul>
+              </div><!--/.nav-collapse -->
+            </div><!--/.container-fluid -->
+          </nav>
+<!--/navbar-->
+
+  <script>$(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+      });
+  });
+  </script>
+  
+<body>
+
+    <h1>Movie Analysis By Source Type</h1>
+    
+    <h4 id="data"> 
+      <br>
+      <h2 class = "text-warning"><b>In the chart below, select the year to display the the source of 
+      the movie and the average domestic revenue the category made in a particular year. 
+      For instance, movies based on comic books grossed on average 
+      $121(M) in 2010.</b>
+    </h2>
+     
+    <h2 class = "text-success">
+		 Movie Chart (In Millions) 
+	</h2>
+    <div id="years">
+      <h4 class = "text-success"><b>Click:</b></h2>
+      <button type="button" id="year2010">2010</button>
+      <button type="button" id="year2011">2011</button>
+      <button type="button" id="year2012">2012</button>
+      <button type="button" id="year2013">2013</button>
+      <button type="button" id="year2014">2014</button>
+      <button type="button" id="year2015">2015</button>
+      <button type="button" id="year2016">2016</button>
+      <button type="button" id="year2017">2017</button>
+      <button type="button" id="year2018">2018</button>
+    </div>
+    <h4 id="interaction">
+      <br>
+     
+      <br>
+      
+    </h4>
+    
+    
+    
+    <p id="BubbleChart">
+      <script src="bubble_source.js"></script>
+    </p>
+    <h4></h4>
+    <h2>
+
+</h2>
+
+<div class="container" style="background-color:#EFFBF2;">
+    <p id="menu">
+      Select:
+      <select>
+        <option>count2010</option>
+        <option>count2011</option>
+        <option>count2012</option>
+        <option>count2013</option>
+        <option>count2014</option>
+        <option>count2015</option>
+        <option>count2016</option>
+        <option>count2017</option>
+        <option>count2018</option>
+      </select>
+      <h2 class = "text-warning"><b>
+        Select an option, the top ten movie types by source by year will appear.</b>
+      </h2>
+
+      
+      <p id="chart" style="font-color:green">
+      
+        
+        <script src="chart_source.js"></script>
+      </p>
+    </div>
+
+
+</body>
+
+</html>
