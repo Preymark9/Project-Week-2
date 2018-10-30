@@ -5,7 +5,7 @@ var height = width - width / 3.9;
 
 var margin = 20;
 
-var labelArea = 110;
+var labelArea = 100;
 
 var tPadBot = 40;
 var tPadLeft = 40;
@@ -109,6 +109,8 @@ function yTextRefresh() {
   var data = d3.csv("assets/data/Data.csv").then(function(data) {
     visualize(data);
   });
+
+  const Genre = [...new Set(data)];
 
   function visualize(theData) {
     var curX = "Release Date";
